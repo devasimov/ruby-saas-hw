@@ -10,6 +10,7 @@ def palindrome?(str)
 end
 
 def count_words(str)
+  # YOUR CODE HERE
   hash=Hash.new(0)
   str.scan(/[a-z]+/i).each do|word|
     hash[word.downcase]+=1
