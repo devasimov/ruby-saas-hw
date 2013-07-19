@@ -5,10 +5,21 @@
 
 def palindrome?(str)
   # YOUR CODE HERE
+def palindrome?(str) 
+onlywords=str.gsub(/\d|\s|\W/,'').upcase
+onlywords.reverse==onlywords && onlywords!=''
+end
 end
 
 def count_words(str)
   # YOUR CODE HERE
+def count_words(str)
+hash=Hash.new(0)
+str.scan(/\w+/).each do|word|
+hash[word.downcase]+=1
+end
+hash
+end
 end
 
 
